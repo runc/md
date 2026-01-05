@@ -6,8 +6,8 @@
       "use": "@vercel/static-build",
       "config": {
         "zeroConfig": true,
-        "installCommand": "NPM_CONFIG_REGISTRY=https://registry.npmjs.org pnpm i --frozen-lockfile",
-        "buildCommand": "pnpm web build:only",
+        "installCommand": "NPM_CONFIG_REGISTRY=https://registry.npmjs.org npx -y pnpm@10.24.0 i --frozen-lockfile",
+        "buildCommand": "NPM_CONFIG_REGISTRY=https://registry.npmjs.org npx -y pnpm@10.24.0 web build:only",
         "outputDirectory": "apps/web/dist"
       }
     }
