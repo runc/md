@@ -18,8 +18,9 @@ const isNetlify = process.env.SERVER_ENV === `NETLIFY`
 const isUTools = process.env.SERVER_ENV === `UTOOLS`
 const isCfWorkers = process.env.CF_WORKERS === `1`
 const isCfPages = process.env.CF_PAGES === `1`
+const isVercel = process.env.VERCEL === `1`
 
-const base = isNetlify || isCfWorkers || isCfPages ? `/` : isUTools ? `./` : `/md/`
+const base = isNetlify || isVercel || isCfWorkers || isCfPages ? `/` : isUTools ? `./` : `/md/`
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())

@@ -111,6 +111,10 @@ pnpm web build
 # 部署在根目录
 pnpm web build:h5-netlify
 
+# 部署到 Vercel（根目录 /）
+# - 直接导入仓库即可（已提供 vercel.json）
+# - 构建输出目录：apps/web/dist
+
 # Chrome 插件启动及调试
 pnpm web ext:dev
 # 访问 chrome://extensions/ 打开开发者模式，加载已解压的扩展程序，选择 apps/web/.output/chrome-mv3-dev 目录

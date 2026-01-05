@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "zeroConfig": true,
+        "installCommand": "corepack enable && corepack prepare pnpm@10.24.0 --activate && NPM_CONFIG_REGISTRY=https://registry.npmjs.org pnpm i --frozen-lockfile",
+        "buildCommand": "pnpm web build:only",
+        "outputDirectory": "apps/web/dist"
+      }
+    }
+  ]
+}
